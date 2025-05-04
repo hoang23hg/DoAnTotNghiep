@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "979602285050",
+    "firebase_url": "https://cauten-d1c93-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "cauten-d1c93",
+    "storage_bucket": "cauten-d1c93.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:979602285050:android:76d18bc47e02d3fe7e8443",
+        "android_client_info": {
+          "package_name": "com.example.test3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "979602285050-4e2ei6rd0u7o86euk50mrv9df4b0m31c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.test3",
+            "certificate_hash": "7de2151344d1b30a2eb63da1e7be9e45e4d932e0"
+          }
+        },
+        {
+          "client_id": "979602285050-eljb93f1c5ibu8ilf38qe5u8gp1koisl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.test3",
+            "certificate_hash": "b86bcf9be83ce90c9d85033a42189c999a221378"
+          }
+        },
+        {
+          "client_id": "979602285050-thfevjcig05p15ti8k2lvlsne9c2q59o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5z4OZ8Bc-Y3kU7huV7LncASOV0Ov4M_M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "979602285050-thfevjcig05p15ti8k2lvlsne9c2q59o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

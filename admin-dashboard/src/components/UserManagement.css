@@ -1,0 +1,128 @@
+/* Container tổng */
+.user-management {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Tiêu đề */
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form nhập thông tin */
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+
+/* Ô input */
+.form-container input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Container chứa ô tìm kiếm và nút thêm */
+.search-add-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+/* Ô tìm kiếm */
+.search-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    flex-shrink: 0;
+}
+
+/* Nút thêm */
+.add-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* Bảng danh sách người dùng */
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    table-layout: fixed; /* Cố định chiều rộng cột */
+}
+
+/* Định dạng cột để không thay đổi khi tìm kiếm */
+.user-table th, .user-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    word-wrap: break-word;
+    white-space: normal; /* Hiển thị đầy đủ nội dung */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Cố định chiều rộng từng cột */
+.user-table th:nth-child(1), .user-table td:nth-child(1) { width: 8%; }  /* UID */
+.user-table th:nth-child(2), .user-table td:nth-child(2) { width: 20%; } /* Email */
+.user-table th:nth-child(3), .user-table td:nth-child(3) { width: 15%; } /* Tên */
+.user-table th:nth-child(4), .user-table td:nth-child(4) { width: 15%; } /* Số điện thoại */
+.user-table th:nth-child(5), .user-table td:nth-child(5) { width: 25%; } /* Địa chỉ */
+.user-table th:nth-child(6), .user-table td:nth-child(6) { width: 12%; min-width: 100px; } /* Hành động */
+
+/* Đảm bảo mỗi dòng chỉ có một hàng */
+.user-table tbody tr {
+    display: table-row;
+    height: auto; /* Đảm bảo ô có thể co giãn theo nội dung */
+}
+
+/* Căn chỉnh nội dung trong ô */
+.user-table td {
+    vertical-align: middle;
+    white-space: normal; /* Cho phép xuống dòng khi nội dung dài */
+    word-break: break-word; /* Xuống dòng khi cần thiết */
+}
+
+
+/* Nút sửa */
+.edit-btn {
+    background: #ffc107;
+    color: black;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+/* Nút xóa */
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}

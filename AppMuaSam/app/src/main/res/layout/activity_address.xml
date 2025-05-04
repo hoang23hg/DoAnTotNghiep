@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:layout_marginTop="30dp"
+    android:layout_marginBottom="10dp">
+
+    <!-- Nút quay lại -->
+    <ImageButton
+
+        android:id="@+id/btnBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/back"
+        android:layout_alignParentStart="true" />
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Địa chỉ"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <!-- Danh sách địa chỉ -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewAddress"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/txtTitle"
+        android:layout_above="@id/btnAddAddress"
+        android:layout_marginTop="10dp" />
+
+    <!-- Nút thêm địa chỉ -->
+    <ImageButton
+        android:id="@+id/btnAddAddress"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/recyclerViewAddress"
+        android:background="@drawable/bg_category"
+        android:src="@drawable/add_address"
+
+        android:elevation="4dp" />
+
+</RelativeLayout>

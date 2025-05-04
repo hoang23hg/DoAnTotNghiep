@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="30dp"
+    android:padding="20dp">
+    <ImageView
+        android:id="@+id/back_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/back"
+        android:clickable="true"
+        android:layout_marginBottom="20dp"
+        />
+
+    <EditText
+        android:id="@+id/phoneEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập số điện thoại"
+        android:inputType="phone"
+        android:padding="10dp"
+        android:background="@android:drawable/edit_text"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnSendOtp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Gửi OTP"
+        android:layout_gravity="center"
+        android:backgroundTint="#3B82F6"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/otpEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập mã OTP"
+        android:inputType="number"
+        android:padding="10dp"
+        android:background="@android:drawable/edit_text"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnVerifyOtp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Xác minh OTP"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
+
+</LinearLayout>

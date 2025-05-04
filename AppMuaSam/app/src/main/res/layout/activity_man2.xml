@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+<ImageView
+    android:layout_width="250dp"
+    android:layout_height="250dp"
+    android:background="@drawable/logo"
+    android:layout_marginBottom="20sp">
+</ImageView>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Step into your "
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"/>
+    <TextView
+        android:id="@+id/tv_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="style"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#3B82F6"
+        android:layout_marginBottom="4dp"/>
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A world of fashion"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#3B82F6"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Mô tả -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Browse the latest styles from top brands\nGet personalized recommendations\nEnjoy fast, free shipping"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Nút chính -->
+    <Button
+        android:id="@+id/btnGetStarted"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:text="Let’s get started"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#3B82F6"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Đăng nhập -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_already_have_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account ? "
+            android:textSize="14sp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/tvSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign in"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:textColor="#3B82F6"/>
+    </LinearLayout>
+
+</LinearLayout>

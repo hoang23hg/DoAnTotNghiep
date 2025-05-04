@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".User.CaNhanFragment"
+    android:orientation="vertical">
+
+    <!-- Tiêu đề Cá nhân -->
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cá nhân"
+        android:textStyle="bold"
+        android:textSize="28sp"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="4dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_login"/>
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/btnProfile"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Hồ sơ của tôi"
+        android:backgroundTint="#E9E1E1"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="16dp"
+
+        />
+
+    <!-- Nút Địa chỉ -->
+    <Button
+        android:id="@+id/btnAddress"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Địa chỉ của tôi"
+        android:backgroundTint="#E9E1E1"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="8dp"
+         />
+
+    <!-- Nút Đổi mật khẩu -->
+    <Button
+        android:id="@+id/btnChangePassword"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Đổi mật khẩu"
+        android:backgroundTint="#E9E1E1"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="8dp"
+         />
+
+    <!-- Nút Đăng xuất -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Đăng xuất"
+        android:backgroundTint="#E9E1E1"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="8dp"
+         />
+
+</LinearLayout>
