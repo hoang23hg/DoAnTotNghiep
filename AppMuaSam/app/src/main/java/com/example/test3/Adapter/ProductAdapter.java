@@ -48,7 +48,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         // Load ảnh sản phẩm từ URL
         Glide.with(holder.itemView.getContext())
                 .load(product.getImageUrl())
-                .placeholder(R.drawable.anh1) // Ảnh mặc định khi tải
+                .placeholder(R.drawable.loadding) // Ảnh mặc định khi tải
                 .into(holder.imgProduct);
 
         // Xử lý sự kiện click vào item sản phẩm

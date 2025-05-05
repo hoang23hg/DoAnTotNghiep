@@ -45,7 +45,34 @@
         android:src="@drawable/ic_scan"
         android:layout_marginStart="-40dp"/>
 
+
     </LinearLayout>
+    <RadioGroup
+        android:id="@+id/radioGroupPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="8dp">
+
+        <RadioButton
+            android:id="@+id/radioPriceAsc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giá tăng dần"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp"
+            />
+
+        <RadioButton
+            android:id="@+id/radioPriceDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giá giảm dần"
+            android:layout_weight="1"
+            android:layout_marginStart="16dp" />
+    </RadioGroup>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerSearch"
         android:layout_width="match_parent"

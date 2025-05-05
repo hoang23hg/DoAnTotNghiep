@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.test3.Adapter.ReviewAdapter;
 import com.example.test3.Interface.ApiService;
@@ -30,6 +31,7 @@ public class DanhGiaFragment extends Fragment {
     private RecyclerView recyclerView;
     private ReviewAdapter reviewAdapter;
     private int productId;
+    TextView tvNoReview;
 
     public static DanhGiaFragment newInstance(int productId) {
         DanhGiaFragment fragment = new DanhGiaFragment();
@@ -53,8 +55,9 @@ public class DanhGiaFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_danh_gia, container, false);
         recyclerView = view.findViewById(R.id.recyclerReview);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        tvNoReview = view.findViewById(R.id.tvNoReview);
 
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         if (getArguments() != null) {
             productId = getArguments().getInt("productId");
@@ -73,24 +76,32 @@ public class DanhGiaFragment extends Fragment {
                 if (response.isSuccessful() && response.body() != null) {
                     List<Review> reviewList = response.body().getReviews();
 
-                    // ✅ Log số lượng review để kiểm tra dữ liệu nhận được từ API
-                    Log.d("API", "Review size: " + reviewList.size());
+                    if (reviewList == null || reviewList.isEmpty()) {
+                        recyclerView.setVisibility(View.GONE);
+                        tvNoReview.setVisibility(View.VISIBLE);
+                    } else {
+                        recyclerView.setVisibility(View.VISIBLE);
+                        tvNoReview.setVisibility(View.GONE);
+                        reviewAdapter = new ReviewAdapter(reviewList);
+                        recyclerView.setAdapter(reviewAdapter);
+                        reviewAdapter.notifyDataSetChanged();
+                    }
 
-                    reviewAdapter = new ReviewAdapter(reviewList);
-                    recyclerView.setAdapter(reviewAdapter);
-                    reviewAdapter.notifyDataSetChanged();
                 } else {
                     Log.d("API", "Response không thành công hoặc body null");
+                    recyclerView.setVisibility(View.GONE);
+                    tvNoReview.setVisibility(View.VISIBLE);
                 }
             }
-
 
             @Override
             public void onFailure(@NonNull Call<ReviewResponse> call, @NonNull Throwable t) {
                 Log.e("API", "Error: " + t.getMessage());
-
+                recyclerView.setVisibility(View.GONE);
+                tvNoReview.setVisibility(View.VISIBLE);
             }
         });
     }
+
 }
 

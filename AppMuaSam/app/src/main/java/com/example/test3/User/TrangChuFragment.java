@@ -79,7 +79,7 @@ public class TrangChuFragment extends Fragment {
         });
 
         // Cài đặt Banner
-        bannerList = List.of(R.drawable.pt_banner1, R.drawable.pt_banner2);
+        bannerList = List.of(R.drawable.pt_banner5, R.drawable.pt_banner3, R.drawable.pt_banner4, R.drawable.pt_banner6);
         BannerAdapter adapter = new BannerAdapter(getContext(), bannerList);
         viewPager.setAdapter(adapter);
 

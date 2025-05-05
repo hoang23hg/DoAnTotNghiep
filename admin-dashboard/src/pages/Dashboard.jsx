@@ -32,8 +32,8 @@ const Dashboard = () => {
       {/* Grid chia thành 2 cột */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         {/* Phần Carousel */}
-        <div className="w-full h-36"> {/* Giảm chiều cao xuống 36 */}
-          <Carousel autoplay className="h-full">
+        <div className="w-full h-45"> {/* Giảm chiều cao xuống 36 */}
+          <Carousel autoplay autoplaySpeed={3000} className="h-full">
             <div>
               <img src="/images/banner1.png" alt="Khuyến mãi" className="w-full h-full object-cover rounded-lg" />
             </div>
@@ -42,6 +42,18 @@ const Dashboard = () => {
             </div>
             <div>
               <img src="/images/banner3.jpg" alt="Báo cáo" className="w-full h-full object-cover rounded-lg" />
+            </div>
+            <div>
+              <img src="/images/banner4.png" alt="sale" className="w-full h-full object-cover rounded-lg" />
+            </div>
+            <div>
+              <img src="/images/Banner5.png" alt="sale2" className="w-full h-full object-cover rounded-lg" />
+            </div>
+            <div>
+              <img src="/images/Banner6.png" alt="sale3" className="w-full h-full object-cover rounded-lg" />
+            </div>
+            <div>
+              <img src="/images/banner7.png" alt="sale4" className="w-full h-full object-cover rounded-lg" />
             </div>
           </Carousel>
         </div>

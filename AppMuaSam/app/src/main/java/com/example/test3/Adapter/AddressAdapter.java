@@ -71,7 +71,6 @@ public class AddressAdapter extends RecyclerView.Adapter<AddressAdapter.ViewHold
                 notifyItemChanged(previousPosition);
                 notifyItemChanged(selectedPosition);
 
-                // Cập nhật địa chỉ mặc định trong MySQL
                 setDefaultAddress(address.getAddressId());
             }
         });

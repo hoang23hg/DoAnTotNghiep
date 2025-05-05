@@ -65,8 +65,8 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.ViewHo
             holder.categoryText.setText(category.getCategory_name());
             Glide.with(context)
                     .load(category.getImageUrl())
-                    .placeholder(R.drawable.anh1)
-                    .error(R.drawable.back)
+                    .placeholder(R.drawable.loadding)
+                    .error(R.drawable.loadding)
                     .into(holder.categoryImage);
 
             // Bắt sự kiện khi bấm vào danh mục -> Mở ProductActivity
